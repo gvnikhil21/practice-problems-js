@@ -18,7 +18,7 @@ let randomTwoDigitNo = 0;
 let sum = avg = 0;
 let count = 0;
 for (; count < 5; count++) {
-    randomTwoDigitNo = Math.floor(Math.random() * 100);
+    randomTwoDigitNo = Math.floor(Math.random() * 90) + 10;
     sum += randomTwoDigitNo;
 }
 avg = sum / count;
