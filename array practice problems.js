@@ -50,16 +50,19 @@
     }
 }
 
-// 4 - program to show addition of three intergers of array
+// 4 - program to find three intergers such that their sum is zero
 {
     let prompt = require('prompt-sync')();
     let numArray = new Array();
     numArray.push(Number(prompt("enter the first number: ")));
     numArray.push(Number(prompt("enter the second number: ")));
-    numArray.push(Number(prompt("enter the third number: ")));
     function sum(totalSum, num) {
         return totalSum + num;
     }
+    console.log(`sum of two elements in array: ${numArray.reduce(sum, 0)}`);
+    let numThird = 0 - numArray.reduce(sum, 0);
+    numArray.push(numThird);
+    console.log(`third element for the sum to be zero: ${numThird}`);
     console.log(`sum of three elements in array: ${numArray.reduce(sum, 0)}`);
 }
 
